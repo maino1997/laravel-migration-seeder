@@ -10,7 +10,6 @@ class TrainController extends Controller
     public function index()
     {
         $trains = Train::all();
-        dd($trains);
-        return view('home');
+        return view('home', ['trains' => $trains]);
     }
 }
